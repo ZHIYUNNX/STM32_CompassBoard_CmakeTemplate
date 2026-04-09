@@ -1,0 +1,1 @@
+This is a STM32F103VET6 Cmake project Template.
