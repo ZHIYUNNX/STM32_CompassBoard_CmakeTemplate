@@ -1,0 +1,54 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "stgdbtarget",
+            "request": "launch",
+            "name": "STM32Cube: STM32 Launch Generic GDB Server",
+            "origin": "snippet",
+            "cwd": "${workspaceFolder}",
+            "preBuild": "${command:st-stm32-ide-debug-launch.build}",
+            "program": "${command:st-stm32-ide-debug-launch.get-projects-binary-from-context1}",
+            "gdb": "${command:st-stm32-ide-debug-launch.get-gdb-executable}",
+            "serverExe": "",
+            "serverParameters": [],
+            "serverHost": "localhost",
+            "serverPort": "",
+            "serverCwd": "",
+            "runEntry": "main",
+            "imagesAndSymbols": [
+                {
+                    "imageFileName": "${command:st-stm32-ide-debug-launch.get-projects-binary-from-context1}",
+                    "imageOffset": "",
+                    "symbolFileName": "${command:st-stm32-ide-debug-launch.get-projects-binary-from-context1}",
+                    "symbolOffset": ""
+                }
+            ],
+            "verbose": true
+        },
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "build\\Debug\\FreeRTOS_LED.elf",
+            "name": "compass_debug",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                 "${workspaceFolder}\\openocd.cfg"
+            ],
+            "serverpath":"E:\\Learning_materials\\STM32\\OPENOCD\\xpack-openocd-0.12.0-7-win32-x64\\xpack-openocd-0.12.0-7\\bin\\openocd.exe",
+            "searchDir": [
+                "E:\\Learning_materials\\STM32\\OPENOCD\\xpack-openocd-0.12.0-7-win32-x64\\xpack-openocd-0.12.0-7\\openocd\\scripts"
+            ],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "gdbPath":"C:\\Users\\33421\\AppData\\Local\\stm32cube\\bundles\\gnu-gdb-for-stm32\\13.3.1+st.10\\bin\\arm-none-eabi-gdb.exe",
+            "svdFile": "E:\\KEIL\\ARM\\PACK\\Keil\\STM32F1xx_DFP\\2.2.0\\SVD\\STM32F103xx.svd"
+        },
+    ]
+}
+
+
